@@ -19,7 +19,7 @@ const main = async () => {
     // Setting up graphQL endpoint, resolvers= schema
     const apolloServer = new ApolloServer({
         schema: await buildSchema({
-            resolvers: [HelloResolver, PostResolver, resolvers],
+            resolvers: [HelloResolver, PostResolver, Resolvers],
             validate: false,
 
         }),

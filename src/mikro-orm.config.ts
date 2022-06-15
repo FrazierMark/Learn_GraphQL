@@ -8,7 +8,8 @@ const config: Options = {
         path: path.join(__dirname, './migrations'), // path to the folder with migrations
         glob: '!(*.d).{js,ts}', // how to match migration files (all .js and .ts files, but not .d.ts)
     },
-    entities: [Post],
+    entities: ['./dist/entities/**/*.js', Post], // path to our JS entities (dist), relative to `baseDir`
+    entitiesTs: ['./src/entities/**/*.ts'], // path to our TS entities (source), relative to `baseDir`
     dbName: 'lireddit',
     user: 'postgres',
     password: 'Frazier89',
